@@ -9,7 +9,20 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body onload="play()">
+    <!-- <audio autoplay loop id="playAudio">
+      <source src="audio/hbd.mp3" />
+    </audio> -->
+
+    <audio id="audio" src="audio/hbd.mp3"></audio>
+
+    <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+
     <div class="moon">
       <div class="crater1"></div>
       <div class="crater2"></div>
@@ -28,7 +41,7 @@
     />
 
     <div id="merrywrap" class="merrywrap">
-      <div class="giftbox">
+      <div class="giftbox" onclick="play()">
         <div class="cover">
           <div></div>
         </div>
@@ -74,10 +87,6 @@
     </div>
 
     <div id="video"></div>
-
-    <audio autoplay loop id="playAudio">
-      <source src="hbd.mp3" />
-    </audio>
 
     <script src="js/index.js"></script>
   </body>
